@@ -1,25 +1,31 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'
+import { Route, Switch, Redirect ,Router} from 'react-router-dom'
 import Footer from './components/Footer/Footer'
-import Home from './containers/home'
-import CategoryList from "./containers/categoryList"
-import Profile from "./pages/Profile/Profile"
-import Recommend from "./pages/Recommend/Recommend"
-import ShopCart from "./pages/ShopCart/ShopCart"
-import Search from './containers/search'
+import history from './history'
+import routes from './config/routes'
+
 function App () {
   return (
     <div>
-      <Switch>
-        <Route path='/home' component={Home} />
-        <Route path='/categorylist' component={CategoryList} />
-        <Route path='/recommend' component={Profile} />
-        <Route path='/shopcart' component={Recommend} />
-        <Route path='/profile' component={ShopCart} />
-        <Route path='/search' component={Search} />
-        <Redirect path='/' to="/home"></Redirect>
-      </Switch>
-      <Footer></Footer>
+      <Router history={history}>
+        <Switch>
+        <Redirect path='/' to="/home" exact></Redirect>
+          {/* <Route path='/home' component={Home} />
+          <Route path='/categorylist' component={CategoryList} />
+          <Route path='/recommend' component={Profile} />
+          <Route path='/shopcart' component={Recommend} />
+          <Route path='/profile' component={ShopCart} />
+          <Route path='/search' component={Search} />
+          <Route path='/home/item/:id' component={Category}/> */}
+           {
+             routes.map(route => <Route {...route} key={route.path}/>)
+            }
+         
+        </Switch>
+        <Footer></Footer>
+      </Router>
+     
+     
     </div>
   );
 }
