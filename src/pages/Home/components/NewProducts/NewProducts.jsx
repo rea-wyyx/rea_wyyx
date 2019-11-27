@@ -5,6 +5,7 @@ class NewProducts extends Component {
 	render () {
 		let { newList } = this.props
 		let getNewList = newList.splice(2, 7)
+		console.log(getNewList)
 		return (
 			<section className="products-container">
 				<div className="products-header">

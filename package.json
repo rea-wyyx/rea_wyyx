@@ -5,19 +5,24 @@
   "dependencies": {
     "@babel/core": "7.6.0",
     "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "@babel/plugin-transform-react-jsx-self": "^7.7.4",
+    "@babel/plugin-transform-react-jsx-source": "^7.7.4",
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "axios": "^0.19.0",
+    "babel": "^6.23.0",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
+    "babel-plugin-import": "^1.13.0",
     "babel-plugin-named-asset-import": "^0.3.4",
     "babel-preset-react-app": "^9.0.2",
     "better-scroll": "^1.15.2",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "2.1.1",
+    "customize-cra": "^0.9.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.1.0",
@@ -50,6 +55,7 @@
     "postcss-safe-parser": "4.0.1",
     "react": "^16.9.0",
     "react-app-polyfill": "^1.0.3",
+    "react-app-rewired": "^2.1.5",
     "react-dev-utils": "^9.0.4",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
@@ -92,9 +98,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
-  }
-=======
   },
   "jest": {
     "roots": [
@@ -150,5 +153,4 @@
     ]
   },
   "proxy": "http://m.you.163.com"
->>>>>>> d1b1f7ff68463724e504a7a18e612e8fe64a1931
 }

@@ -11,7 +11,9 @@ import {
 	HOME_TIMELIST,
 	HOME_NEWLIST,
 	HOME_CATELIST,
-	SORT_CATELIST
+	SORT_CATELIST,
+	PROFILE_LIST,
+	RECOMMEND_LIST
 } from "./action-types"
 
 // 输入后搜索返回的结果状态
@@ -75,6 +77,25 @@ function homeNewList (state = [{}], action) {
 function homeCateList (state = [{ itemList: [] }], action) {
 	switch (action.type) {
 		case HOME_CATELIST:
+			return action.data
+		default:
+			return state
+	}
+}
+
+//识物上
+function worthBuyingList(state =[{worthBuyingList:[]}] ,action) {
+	switch (action.type) {
+		case PROFILE_LIST:
+			return action.data
+		default:
+			return state
+	}
+}
+//识物下
+function autoRecommendData(state=[{autoRecommendData:[]}],action) {
+	switch (action.type) {
+		case RECOMMEND_LIST:
 			return action.data
 		default:
 			return state
@@ -2417,5 +2438,7 @@ export default combineReducers({
 	homeTimeList,
 	homeNewList,
 	homeCateList,
-	sortCateList
+	sortCateList,
+	worthBuyingList,
+	autoRecommendData
 })

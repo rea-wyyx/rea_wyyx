@@ -3,7 +3,8 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import Home from './containers/home'
 import CategoryList from "./containers/categoryList"
-import Profile from "./pages/Profile/Profile"
+// import Profile from "./pages/Profile/Profile"
+import Profile from './containers/profile'
 import Recommend from "./pages/Recommend/Recommend"
 import ShopCart from "./pages/ShopCart/ShopCart"
 import Search from './containers/search'
@@ -23,3 +24,4 @@ function App () {
     </div>
   );
 }
+export default App
