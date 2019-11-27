@@ -32,14 +32,4 @@ function isShow(path) {
 }
 
 
-// class App extends Component () {
-//   render() {
-//     // console.log(this.props)
-//   return (
-    
-//   )
-//  }
- 
-// }
-
 export default withRouter(App);
