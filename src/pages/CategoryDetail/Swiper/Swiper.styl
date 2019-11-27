@@ -1,0 +1,40 @@
+@import '../../../common/stylus/mixins.styl'
+
+.page
+	.swiper-container
+		width 750px
+		height 400px
+
+		img
+			width 100%
+			height 100%
+			position relative
+
+		.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
+			position absolute
+			width auto
+			right 0px
+			left auto
+			height 4px
+			bottom 50px
+
+			.swiper-pagination-customs
+				width 10px
+				height 10px
+				display inline-block
+				margin-right 20px
+				border-radius 50%
+				border 2px solid #fff
+				background-color transparent
+
+	.my-bullet-active
+		// width 10px
+		// height 10px
+		display inline-block
+		margin-right 20px
+		border-radius 50%
+		//background-color $red
+		background-image  url('../../../static/images/icon/bullet-active-48b3811a97.png')
+		background-size cover
+				
+      

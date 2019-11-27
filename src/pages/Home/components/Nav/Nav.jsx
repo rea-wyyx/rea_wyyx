@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {withRouter} from 'react-router-dom'
 import './Nav.styl'
 class Nav extends Component {
-	goToCategory(index){
-	//	this.props.history.push(`/product/detail/${index}`)
-
+  toDetail=()=>{
+		this.props.history.push('/home/item')
 	}
 	render () {
 		let { navList } = this.props
@@ -13,9 +13,10 @@ class Nav extends Component {
 				<ul className="nav-box">
 					{
 						navList.map((item, index) => {
-							return (<li className="nav-item" key={index} onClick = {this.goToCategory(index)}>
-								<img src={item.picUrl} alt="导航列表" />
-								<span>{item.text}</span>
+							return (<li className="nav-item" key={index} onClick={this.toDetail}>
+								{/* <a href={item.schemeUrl}></a> */}
+									<img src={item.picUrl} alt="导航列表" />
+									<span>{item.text}</span>
 							</li>)
 						})
 					}
@@ -25,4 +26,5 @@ class Nav extends Component {
 		
 	}
 }
-export default connect(state => ({ navList: state.homeNavList }))(Nav)
+
+export default connect(state => ({ navList: state.homeNavList }))(withRouter(Nav))

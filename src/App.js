@@ -17,12 +17,13 @@ function App () {
           <Route path='/profile' component={ShopCart} />
           <Route path='/search' component={Search} />
           <Route path='/home/item/:id' component={Category}/> */}
-           {
-             routes.map(route => <Route {...route} key={route.path}/>)
-            }
-         
+          {
+          routes.map(route => <Route {...route} key={route.path}/>)
+          }
+             
         </Switch>
         <Footer></Footer>
+        
       </Router>
      
      
