@@ -28,7 +28,7 @@ export default class ShopCart extends Component {
       </div>
       <img className="cart-img" src="http://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noCart-d6193bd6e4.png" alt="cartImg"/>
       <div className="add-loginBtn">
-        <span className="goto-add">去添加点什么吧</span>
+        <span className="goto-add"> 去添加点什么吧</span>
         <div className="login-btn">
           <a href="#1" onClick={() => { this.props.history.push('/profile') }}>登录</a>
         </div>
