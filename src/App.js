@@ -13,7 +13,7 @@ function isShow(path) {
 
  class App extends Component {
   render() {
-    console.log('----', this.props.location.pathname)
+    // console.log('----', this.props.location.pathname)
     return (
       <div>
       
