@@ -13,12 +13,8 @@ import {
 	HOME_NEWLIST,
 	HOME_CATELIST,
 	SORT_CATELIST,
-<<<<<<< HEAD
 	PROFILE_LIST,
 	RECOMMEND_LIST
-=======
-	SHOW_FOOTER
->>>>>>> fb44feb05e416b0e409edb666862623f329bb40f
 } from "./action-types"
 import {
 	reqSearchResult,
