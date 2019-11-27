@@ -2417,5 +2417,6 @@ export default combineReducers({
 	homeTimeList,
 	homeNewList,
 	homeCateList,
-	sortCateList
+	sortCateList,
+
 })
