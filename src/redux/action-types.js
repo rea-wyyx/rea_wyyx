@@ -20,3 +20,5 @@ export const HOME_CATELIST = "HOME_CATELIST"
 
 // 获取分类的数据
 export const SORT_CATELIST = "SORT_CATELIST"
+
+export const SHOW_FOOTER = 'show_footer'
