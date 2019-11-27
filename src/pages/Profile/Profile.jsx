@@ -14,6 +14,7 @@ export default class Profile extends Component {
 	
 	
 	render () {
+		// console.log(this)
 		return (
 			<div className="m-main-container">
         <Pscheader push={this.props}/>

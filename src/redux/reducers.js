@@ -2441,4 +2441,5 @@ export default combineReducers({
 	sortCateList,
 	worthBuyingList,
 	autoRecommendData
+
 })

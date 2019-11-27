@@ -28,3 +28,4 @@ export const PROFILE_LIST = "PROFILE_LIST"
 export const RECOMMEND_LIST = "RECOMMEND_LIST"
 
 
+export const SHOW_FOOTER = 'show_footer'

@@ -1,27 +1,45 @@
-import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'
+import React ,{ Component }from 'react';
+import { Route, Switch, Redirect ,withRouter} from 'react-router-dom'
 import Footer from './components/Footer/Footer'
-import Home from './containers/home'
-import CategoryList from "./containers/categoryList"
-// import Profile from "./pages/Profile/Profile"
-import Profile from './containers/profile'
-import Recommend from "./pages/Recommend/Recommend"
-import ShopCart from "./pages/ShopCart/ShopCart"
-import Search from './containers/search'
-function App () {
-  return (
-    <div>
-      <Switch>
-        <Route path='/home' component={Home} />
-        <Route path='/categorylist' component={CategoryList} />
-        <Route path='/recommend' component={Profile} />
-        <Route path='/shopcart' component={Recommend} />
-        <Route path='/profile' component={ShopCart} />
-        <Route path='/search' component={Search} />
-        <Redirect path='/' to="/home"></Redirect>
-      </Switch>
-      <Footer></Footer>
-    </div>
-  );
+import routes from './config/routes'
+
+const showPaths = ['/home', '/categorylist', '/recommend', '/shopcart']
+
+function isShow(path) {
+  return showPaths.some(item => {
+    return item === path || path.indexOf('/categorylist')===0
+  })
 }
-export default App
+
+ class App extends Component {
+  render() {
+    console.log('----', this.props.location.pathname)
+    return (
+      <div>
+      
+          <Switch>
+            <Redirect path='/' to="/home" exact></Redirect>
+            {
+              routes.map(route => <Route {...route} key={route.path}/>)
+              }
+          </Switch>
+          {
+            isShow(this.props.location.pathname) ? <Footer ></Footer> : null
+          }
+    </div>
+    )
+  }
+}
+
+
+// class App extends Component () {
+//   render() {
+//     // console.log(this.props)
+//   return (
+    
+//   )
+//  }
+ 
+// }
+
+export default withRouter(App);
