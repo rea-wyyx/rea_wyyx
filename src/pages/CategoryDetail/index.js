@@ -7,7 +7,7 @@ import Split from '../../components/Split/Split'
 export default class CategoryDetail extends Component {
   render() {
     return (
-      <div>
+      <div className="mainContainer">
         <HeaderTitle/>
        	<Swiper1 ref="swiper" />
         <Split/>

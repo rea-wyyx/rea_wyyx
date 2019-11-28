@@ -18,7 +18,7 @@ export default class RecommendFollow extends Component {
          <div className="goods">
            <ul>
              <li>
-               <div>
+               <div className='goodItem'>
                  <img src="https://yanxuan-item.nosdn.127.net/16ba6260bc2b9d29b7093399fb280e06.png" alt=""/>
                  <span>古法传承 艾灸养生</span>
                  <span>便携智能艾灸盒</span>
