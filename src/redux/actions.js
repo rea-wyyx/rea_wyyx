@@ -14,15 +14,15 @@ import {
 	HOME_CATELIST,
 	SORT_CATELIST,
 	PROFILE_LIST,
-	RECOMMEND_LIST
+	RECOMMEND_LIST,
 } from "./action-types"
 import {
 	reqSearchResult,
 	reqInitSearch,
 	reqHomeData,
 	reqCategoryList,
-	reqWorthBuying ,
-	reqAutoRecommendData
+	reqWorthBuying,
+	reqMwrappers
 } from '../api/index'
 //根据输入的内容修改搜索结果数组
 export const changeResultArr = (searchResultArr) => ({ type: SEARCH_RESULT, data: searchResultArr })
@@ -49,7 +49,6 @@ export const worthBuyingList = (data) => ({type:PROFILE_LIST,data })
 
 //识物下
 export const autoRecommendData = (data) => ({type:RECOMMEND_LIST,data})
-
 
 //异步action  ---必须在store中使用中间件才能这么写
 //每一个异步的action最好提供一个同步的action
@@ -120,9 +119,9 @@ export const getWorthBuying =() => {
 //获取识物下的数据
 export const getAutoRecommend = () => {
 	return async (dispatch) => {
-		let result = await reqAutoRecommendData()
+		let result = await reqMwrappers()
 		if (result.code === '200') {
-			dispatch(autoRecommendData(result.data.result))
+			dispatch(autoRecommendData(result.data.result[0].topics))
 		}
 	}
 }

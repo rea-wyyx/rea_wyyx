@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+
 import './Pscheader.styl'
 export default class Pscheader extends Component {
   render() {
@@ -16,4 +17,4 @@ export default class Pscheader extends Component {
       </div>
     )
   }
-}
+} 

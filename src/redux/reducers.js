@@ -101,7 +101,6 @@ function autoRecommendData(state=[{autoRecommendData:[]}],action) {
 			return state
 	}
 }
-
 /////////////////////////////////////////////////////////////////////
 let initArr = [
 	{
