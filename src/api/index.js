@@ -32,3 +32,10 @@ export const reqOrderShowTop = (id) => ajax(`${prefix}/topic/v1/look/getCollecti
 
 // 识物-晒单 评价数据 ---- http://m.you.163.com/topic/v1/look/getList.json?id=9&size=2&type=1|2|3
 export const reqOrderShowRatings = (page, size, type) => ajax(`${prefix}/topic/v1/look/getList.json`, { page, size, type });
+
+
+//识物-值得买 数据----http://m.you.163.com/topic/v1/know/navWap.json
+export const reqWorthBuying = () => ajax(`${prefix}/topic/v1/know/navWap.json`)
+
+//识物-下    ----http://m.you.163.com/topic/v1/find/recAuto.json?page=1&size=5&exceptIds=104291,104591
+export const reqMwrappers = () => ajax(`${prefix}/topic/v1/find/recAuto.json?page=1&size=5&exceptIds=104291,104591`)

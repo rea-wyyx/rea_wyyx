@@ -13,13 +13,16 @@ import {
 	HOME_NEWLIST,
 	HOME_CATELIST,
 	SORT_CATELIST,
-	SHOW_FOOTER
+	PROFILE_LIST,
+	RECOMMEND_LIST,
 } from "./action-types"
 import {
 	reqSearchResult,
 	reqInitSearch,
 	reqHomeData,
-	reqCategoryList
+	reqCategoryList,
+	reqWorthBuying,
+	reqMwrappers
 } from '../api/index'
 //根据输入的内容修改搜索结果数组
 export const changeResultArr = (searchResultArr) => ({ type: SEARCH_RESULT, data: searchResultArr })
@@ -41,6 +44,11 @@ export const homeCategoryList = (data) => ({ type: HOME_CATELIST, data })
 // 分类中的数据
 export const fenleiCategoryList = (data) => ({ type: SORT_CATELIST, data })
 
+//识物上
+export const worthBuyingList = (data) => ({type:PROFILE_LIST,data })
+
+//识物下
+export const autoRecommendData = (data) => ({type:RECOMMEND_LIST,data})
 
 //异步action  ---必须在store中使用中间件才能这么写
 //每一个异步的action最好提供一个同步的action
@@ -98,3 +106,22 @@ export const getCategoryList = () => {
 	}
 }
 
+//获取识物上的数据
+export const getWorthBuying =() => {
+	return async (dispatch) => {
+		let result = await reqWorthBuying()
+		if (result.code === '200') {
+			dispatch(worthBuyingList(result.data.navList))
+		}
+	}
+}
+
+//获取识物下的数据
+export const getAutoRecommend = () => {
+	return async (dispatch) => {
+		let result = await reqMwrappers()
+		if (result.code === '200') {
+			dispatch(autoRecommendData(result.data.result[1].topics))
+		}
+	}
+}

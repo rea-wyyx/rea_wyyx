@@ -92,4 +92,4 @@ class Header extends Component {
 	}
 }
 
-export default connect(state => ({ navList: state.homeNavList }))(Header)
+export default connect (state => ({ navList: state.homeNavList }))(Header)

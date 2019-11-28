@@ -22,3 +22,9 @@ export const HOME_CATELIST = "HOME_CATELIST"
 export const SORT_CATELIST = "SORT_CATELIST"
 
 export const SHOW_FOOTER = 'show_footer'
+
+//识物上
+export const PROFILE_LIST = "PROFILE_LIST"
+
+//识物下
+export const RECOMMEND_LIST = "RECOMMEND_LIST"
