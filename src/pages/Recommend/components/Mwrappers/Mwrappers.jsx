@@ -26,7 +26,7 @@ class Mwrappers extends Component {
                           <img src={item.avatar} alt=""/>
                           <div>{item.nickname}</div>
                         </div>
-                        <div className="m-upArea">asdasd</div>
+                  <div className="m-upArea">{item.readCount}</div>
                       </div>
                     </div>
                   )
