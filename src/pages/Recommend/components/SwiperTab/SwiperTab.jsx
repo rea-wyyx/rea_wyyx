@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import BScroll from 'better-scroll'
 import './SwiperTab.styl'
+import Lazy from '../Lazy.jsx'
 import bg from '../../images/bg.png'
 import logo from '../../images/logo.png'
 class SwiperTab extends Component {
@@ -32,7 +33,7 @@ class SwiperTab extends Component {
                       return(
                         <a className="u-item" href="javascript:;" key={index}>
                           <div className="m-topContainer">
-                            <img className="u-topPic" src={item.picUrl} alt=""/>
+                            <Lazy className="u-topPic" src={item.picUrl} alt=""/>
                           </div>
                           <div className="m-detail">
                           <div className="u-mainText">{item.mainTitle}</div>

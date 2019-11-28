@@ -121,7 +121,7 @@ export const getAutoRecommend = () => {
 	return async (dispatch) => {
 		let result = await reqMwrappers()
 		if (result.code === '200') {
-			dispatch(autoRecommendData(result.data.result[0].topics))
+			dispatch(autoRecommendData(result.data.result[1].topics))
 		}
 	}
 }
